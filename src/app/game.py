@@ -60,12 +60,12 @@ class Game:
         return 1 if not deck.deck_size() > 0 and not player.hand and not computer.hand else 0
 
     def print_game_result(self, players: list) -> None:
-        print(f"{players[0].name}'s score: {players[0].score}")
-        print(f"{players[1].name}'s score: {players[1].score}")
+        print(f"{players[0].name}'s score: {players[0].books}")
+        print(f"{players[1].name}'s score: {players[1].books}")
 
-        if players[0].score > players[1].score:
+        if players[0].books > players[1].books:
             print(f"{players[0].name} wins!")
-        elif players[1].score > players[0].score:
+        elif players[1].books > players[0].books:
             print(f"{players[1].name} wins!")
         else:
             print("Nobody wins. The scores are equals.")
